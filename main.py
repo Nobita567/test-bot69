@@ -2,24 +2,24 @@ import time
 from telethon.sync import TelegramClient, events
 
 # Replace the values below with your own API key, API hash, and string session code
-api_id = 123456
-api_hash = 'abcdef1234567890'
-session_string = 'your-session-string-here'
+api_id = 24639866
+api_hash = 'd04ab3fca3e8b8bd2477d8dd1b3e2c97'
+session_string = '1BVtsOJIBu7ZVVXLiiHN5w6n0efhnc8EVc6zGyOf2ygYCuTZUrWzS_-AVzH0OBExFKZFXynfLLoR2WbzDKWuNZLo835A6P9Mb-_7398tH_zwdPD0vln8uyRYounP2tBFpqOTQIlypakazCHLhNQ2J5pZBOlPLZP_XBfweiu4GkQCrRXer5aB9UmlZ4uiJRSYnPEaaaFH0Bu9sdznB2PztbU0o9IFq6taMmXpVsTi16gt7vIM1kBi2LcJVHvMlR_tjKdP6LG_MUjV7SBwU3DSEB8y-5g1pIGxM38t8bNyppJ1cBfZIIeiIh_3BDPtnhXF_Xk3UKtI0ocXT8N5lZnqVv4MdyFNaKy0='
 
 client = TelegramClient(session_string, api_id, api_hash)
 
 # Add your messages here
-messages = ['Message 1', 'Message 2', 'Message 3']
+messages = ['Hello everyone', 'Hello everyone \nHello everyone', 'Hello everyone \nHello everyone \nHello everyone']
 
 # Set the time interval between messages (in seconds)
-message_interval = 300  # 5 minutes
+message_interval = 20  # 20 seconds
 
 # Set the time interval for changing profile image and name (in seconds)
-profile_interval = 3600  # 1 hour
+profile_interval = 60  # 1 minutes
 
 # Add your profile image and name file paths here
-profile_images = ['image1.jpg', 'image2.jpg', 'image3.jpg']
-profile_names = ['Name 1', 'Name 2', 'Name 3']
+profile_images = ['https://telegra.ph/file/0c3c9cb1028a50724968a.jpg', 'https://telegra.ph/file/6c7285e9fa075393b375b.jpg', 'https://telegra.ph/file/5854d74e7e74213151140.jpg']
+profile_names = ['Anjali', 'Pooja', 'Rani']
 
 # Set the initial profile image and name
 current_profile_image = profile_images[0]
@@ -43,7 +43,7 @@ async def change_profile():
 
 async def send_messages():
     # Cycle through the messages and send them to a specific group
-    chat_id = -123456789  # Replace with your own group chat ID
+    chat_id = -1001633934133  # Replace with your own group chat ID
     for message in messages:
         await client.send_message(chat_id, message)
         time.sleep(message_interval)
